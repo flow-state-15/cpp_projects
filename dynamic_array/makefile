@@ -1,7 +1,7 @@
 CXX = clang++
 CXXFLAGS = -Wall -g -O0
 TARGET = program
-SOURCES = main.cpp int_array.cpp
+SOURCES = main.cpp int_array_dynamic.cpp
 OBJECTS = ${SOURCES:.cpp=.o}
 
 all: ${TARGET}
