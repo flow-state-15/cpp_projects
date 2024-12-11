@@ -1,14 +1,17 @@
-#ifndef INT_ARRAY_H
-#define INT_ARRAY_H
+#ifndef INT_ARRAY_DYNAMIC_H
+#define INT_ARRAY_DYNAMIC_H
 
 class IntArray {
     //member list
     private: // array goes here
+        int _size;
+        int _capacity;
+        int* _arr[60] {0};
+        int _last_idx;
     public:
-        void _IntArray(); // constructor IntArray here -- how is IntArray not a collision? probs needs
-        // a differentiating token
+        IntArray();
 
-        void push_back(int value); // add to back
+        int push_back(int value); // add to back return size
         int get(int index) const; // returns el at idx with bounds checking
         int size() const; // returns n of els currently stored
         int capacity() const; // returns current capacity of array

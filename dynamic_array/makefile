@@ -8,7 +8,7 @@ all: ${TARGET}
 	./${TARGET}
 
 ${OBJECTS}: %.o: %.cpp
-	${CXX} ${CXXFLAGS} -c $v -o $@
+	${CXX} ${CXXFLAGS} -c $< -o $@
 
 ${TARGET}: ${OBJECTS}
 	${CXX} ${CXXFLAGS} ${OBJECTS} -o ${TARGET}
