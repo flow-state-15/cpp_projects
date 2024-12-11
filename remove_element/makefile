@@ -1,13 +1,13 @@
 CXX = clang++
 CXXFLAGS = -Wall -g -O0
-SOURCES = main.cpp
+SOURCES = main.cpp print_message.cpp
 OBJECTS = ${SOURCES:.cpp=.o}
 TARGET = program
 
 all: ${TARGET}
 	./${TARGET}
 
-${OBJECTS}: ${SOURCES} #compile sources
+${OBJECTS}: %.o: %.cpp #compile sources individually
 	${CXX} -c $< -o $@
 
 ${TARGET}: ${OBJECTS} #link objects

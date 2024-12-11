@@ -1,7 +1,10 @@
 #include <iostream>
+#include "print_message.h"
 using namespace std;
+using namespace Print;
 
 int main() {
-    cout << "Hello CPP!\n";
+    string m = "this is a new string.";
+    printMessage(m);
     return 0;
 }
