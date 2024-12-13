@@ -1,5 +1,6 @@
 #ifndef INT_ARRAY_DYNAMIC_H
 #define INT_ARRAY_DYNAMIC_H
+#include <optional>
 
 class IntArrayDynamic {
     //member list
@@ -7,10 +8,9 @@ class IntArrayDynamic {
         int _size;
         int _capacity;
         int* _arr;
-        int _last_idx;
     public:
         IntArrayDynamic();
-
+        ~IntArrayDynamic();
         int push(int value); // add to back return size
         int get(int index) const; // returns el at idx with bounds checking
         int size() const; // returns n of els currently stored
