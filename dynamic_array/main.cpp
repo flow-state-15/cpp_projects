@@ -30,6 +30,5 @@ int main() {
     print_int(arr.capacity());
     print_int(arr.get(arr.size()-1));
 
-    arr.~IntArrayDynamic();
     return 0;
 }
